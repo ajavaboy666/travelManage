@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: travelmanage
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.184.135:3306/travel_Manage?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: 123456
+    druid:
+      max-wait: 2000 #\u83B7\u53D6\u8FDE\u63A5\u7684\u6700\u5927\u7B49\u5F85\u65F6\u95F4\uFF0C\u5355\u4F4D\u6BEB\u79D2
+      initial-size: 3 #\u521D\u59CB\u8FDE\u63A5\u6570\uFF0C\u9ED8\u8BA40
+      max-active: 10 #\u6700\u5927\u8FDE\u63A5\u6570\uFF0C\u9ED8\u8BA48
+      min-idle: 3 #\u6700\u5C0F\u95F2\u7F6E\u6570
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #sql\u65E5\u5FD7\u8F93\u51FA
+    cache-enabled: true
+    map-underscore-to-camel-case: true #\u5F00\u542F\u9A7C\u5CF0\u547D\u540D
+
